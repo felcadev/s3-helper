@@ -1,0 +1,34 @@
+{
+  "name": "s3-helper-felcadev",
+  "version": "0.0.1",
+  "description": "Aplicación que ayuda a subir y obtener la url de un archivo de aws s3",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "start:dev": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felcadev/s3-helper.git"
+  },
+  "keywords": [
+    "s3",
+    "aws",
+    "upload",
+    "get",
+    "url",
+    "felcadev"
+  ],
+  "author": "felcadev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felcadev/s3-helper/issues"
+  },
+  "homepage": "https://github.com/felcadev/s3-helper#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1046.0"
+  },
+  "devDependencies": {
+    "jest": "^27.4.5"
+  }
+}
