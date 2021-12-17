@@ -25,7 +25,7 @@ const S3Helper = require('s3-helper-felcadev');
 const s3Helper = new S3Helper(process.env.AWS_ACCESS_KEY_ID, process.env.AWS_SECRET_ACCESS_KEY, process.env.AWS_BUCKET_NAME);
 ```
 
-## 2 ¿Como utilizar?
+## 2 ¿Cómo utilizar?
 
 Ya que se inicializo s3Helper se pueden ocupar los siguientes metodos
 
