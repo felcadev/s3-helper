@@ -16,13 +16,14 @@ Posterior a eso se debe inicializar la variable con la configuración de aws.
 * AWS_ACCESS_KEY_ID
 * AWS_SECRET_ACCESS_KEY
 * AWS_BUCKET_NAME
+* LocationConstraint (ejemplo: "sa-east-1")
 
 En el siguiente ejemplo se ilustra la configuración inicial, se esta ocupando variables de entorno para dicha configuración.
 
 ```javascript
 const S3Helper = require('s3-helper-felcadev');
 
-const s3Helper = new S3Helper(process.env.AWS_ACCESS_KEY_ID, process.env.AWS_SECRET_ACCESS_KEY, process.env.AWS_BUCKET_NAME);
+const s3Helper = new S3Helper(process.env.AWS_ACCESS_KEY_ID, process.env.AWS_SECRET_ACCESS_KEY, process.env.AWS_BUCKET_NAME, process.env.LocationConstraint);
 ```
 
 ## 2 ¿Cómo utilizar?

@@ -3,10 +3,11 @@ const AWS = require('aws-sdk');
 
 class S3Helper{
     
-    constructor(AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_BUCKET_NAME){
+    constructor(AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_BUCKET_NAME, LocationConstraint){
         this.AWS_ACCESS_KEY_ID = AWS_ACCESS_KEY_ID;
         this.AWS_SECRET_ACCESS_KEY = AWS_SECRET_ACCESS_KEY;
         this.AWS_BUCKET_NAME = AWS_BUCKET_NAME;
+        this.LocationConstraint = LocationConstraint;
 
 
         this.s3 = new AWS.S3({
@@ -28,8 +29,7 @@ class S3Helper{
         const params = {
             Bucket: this.AWS_BUCKET_NAME,
             CreateBucketConfiguration: {
-                // Set your region here
-                LocationConstraint: "sa-east-1"
+                LocationConstraint: this.LocationConstraint
             },
             Key: fileName,
             Body: fileContent
